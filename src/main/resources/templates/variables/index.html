@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <title th:text="${titulo}"></title>
+    </head>
+    <body>
+        <div>
+            <h2>Send Formulario...</h2>    
+        </div>
+        <h1 th:text="${titulo}" ></h1>
+    <li>
+        <a th:href="@{/variables/string/} + 'Hola' ">/variables/string/Hola</a>
+    </li>
+    <li>
+        <a th:href="@{/variables/string/} + 'El numero es: ' + '/' + 7 ">/variables/string/El numero es: </a>
+    </li>
+    </body>
+</html>
