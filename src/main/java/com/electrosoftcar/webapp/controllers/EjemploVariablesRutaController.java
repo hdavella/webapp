@@ -4,6 +4,7 @@
  */
 package com.electrosoftcar.webapp.controllers;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,13 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author HDAVELLA
  */
+
 @Controller
 @RequestMapping("/variables")
 public class EjemploVariablesRutaController {
     
+    @Value("${texto.EjemploVariablesRuta.controller.titulo}")
+    private String textoindex;
+    
     @GetMapping("/")
     public String index(Model model){
-        model.addAttribute("titulo", "Para enviar...");
+        model.addAttribute("titulo", textoindex);
         return "variables/index";
     }
 
